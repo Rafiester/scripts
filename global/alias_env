@@ -1,0 +1,18 @@
+# Setup GitHub Aliases and Identity
+echo "***** Identity Setup Done *****"
+git config --global user.name "Rafiester"
+git config --global user.email "rafi.haqqi@gmail.com"
+git config --global alias.st 'status'
+git config --global alias.p 'push'
+git config --global alias.pl 'pull'
+git config --global alias.pf 'push --force'
+git config --global alias.l 'log'
+git config --global alias.f 'fetch'
+git config --global alias.rev 'revert'
+git config --global alias.re 'reset'
+git config --global alias.cp 'cherry-pick'
+git config --global alias.cpc 'cherry-pick --continue'
+git config --global alias.cpa 'cherry-pick --abort'
+git config --global alias.c 'commit'
+git config --global alias.cs 'commit --signoff'
+git config --global alias.ca 'commit --amend'
