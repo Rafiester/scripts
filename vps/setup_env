@@ -6,77 +6,34 @@ TZ=Asia/Jakarta
 sudo ln -snf /usr/share/zoneinfo/$TZ /etc/localtime
 
 # Setup Environment
-echo "***** Enviroment setup.. *****"
+echo "***** Enviroment setup. *****"
 sudo apt-get update
 sudo apt-get upgrade -y
-sudo apt install git ccache nano sshpass llvm-* lld --no-install-recommends -y \
-		     autoconf \
-		     autogen \
-		     automake \
-		     autotools-dev \
-	             bc \
-	             binutils \
-	             binutils-aarch64-linux-gnu \
-	             binutils-arm-linux-gnueabi \
-		     bison \
-		     bzip2 \
-		     ca-certificates \
-		     coreutils \
-		     cmake \
-		     curl \
-		     expect \
-		     flex \
-		     g++ \
-		     gawk \
-	             gcc \
-		     gnupg \
-		     gperf \
-		     help2man \
-		     lftp \
-		     libc6-dev \
-		     libelf-dev \
-		     libgomp1-* \
-		     liblz4-tool \
-	             libncurses5-dev \
-		     libssl-dev \
-		     libstdc++6 \
-	             libtool \
-		     libtool-bin \
-	             libtinfo5 \
-	             m4 \
-	             make \
-	             openjdk-8-jdk \
-	             openssh-client \
-	             openssl \
-	             ovmf \
-	             patch \
-	             pigz \
-		     python3 \
-		     python2 \
-		     rsync \
-		     shtool \
-		     subversion \
-		     tar \
-		     texinfo \
-		     tzdata \
-		     u-boot-tools \
-		     unzip \
-		     wget \
-		     xz-utils \
-		     zip \
-		     zlib1g-dev \
-		     zstd
+sudo apt install nano 
+    sshpass llvm-* lld --no-install-recommends -y \
+    autogen autotools-dev jq binutils \
+    binutils-aarch64-linux-gnu binutils-arm-linux-gnueabi \
+    bzip2 ca-certificates coreutils expect help2man lftp \
+    libelf-dev libgomp1-* liblz4-tool libstdc++6 libtool-bin \
+    m4 make openjdk-8-jdk openssh-client openssl ovmf pigz \
+    python3 rsync shtool tar tzdata u-boot-tools wget \
+    xz-utils zstd
 sleep 1
 
 # Setup GitHub
-echo "***** Setup GitHub *****"
-source "
-git config --global credential.helper "cache --timeout=7200"
+. $HOME/scripts/global/git_env
 
 # Setup for VPS/Server
 git clone https://github.com/akhilnarang/scripts $HOME/scripts
 . $HOME/scripts/setup/android_build_env.sh
 sleep 1
+
+# Setup Barom
+. $HOME/scripts/global/barom_env
+sleep 1
+
+# Setup SSH
+. $HOME/scripts/global/ssh_env
 
 # End timer
 END=$(date +"%s")

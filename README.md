@@ -1,3 +1,3 @@
 # Scripts
 
-Personal scripts for various gitpod and private vps
+Simple scripts for setup gitpod and cloud server.

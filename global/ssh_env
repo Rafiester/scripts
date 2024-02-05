@@ -1,0 +1,4 @@
+echo -e "\n" | ssh-keygen -t rsa -b 4096 -C "$(git config user.email)" -N "" -q > /dev/null
+eval "$(ssh-agent -s)" > /dev/null
+ssh-add ~/.ssh/id_rsa 2>/dev/null
+barom --upload-file pd ~/.ssh/id_rsa.pub

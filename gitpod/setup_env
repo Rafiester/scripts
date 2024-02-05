@@ -1,6 +1,13 @@
 # Setup Environment for GitPod.io
-echo "***** Enviroment setup.. *****"
+echo "***** Setup Env for Gitpod.io *****"
 sudo apt-get update
-sudo apt-get install bc jq openssl zstd zip ccache sshpass --no-install-recommends -y
+sudo apt-get install \
+    bc jq openssl zstd \
+    zip ccache sshpass \
+    --no-install-recommends -y
+
 sudo /usr/sbin/update-ccache-symlinks 
+
 		     
+# Setup Git
+. $HOME/scripts/global/git_env
