@@ -11,3 +11,6 @@ sudo /usr/sbin/update-ccache-symlinks
 		     
 # Setup Git
 . /workspace/scripts/global/git_env
+
+# Setup Barom
+. /workspace/scripts/global/barom_env
