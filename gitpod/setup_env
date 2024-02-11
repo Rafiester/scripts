@@ -10,4 +10,4 @@ sudo /usr/sbin/update-ccache-symlinks
 
 		     
 # Setup Git
-. $HOME/scripts/global/git_env
+. /workspace/scripts/global/git_env

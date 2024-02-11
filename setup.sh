@@ -13,7 +13,7 @@ read -s srv
 if [ "$srv" == "1" ];
 	then
 		echo "Installing for Gitpod.io"
-                . $HOME/scripts/gitpod/setup_env
+                . /workspace/scripts/gitpod/setup_env
 
 elif [ "$srv" == "2" ];
 	then
