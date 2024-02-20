@@ -15,7 +15,7 @@ git config --global user.email "rafi.haqqi@gmail.com"
 echo "***** Enviroment setup. *****"
 sudo apt-get update
 sudo apt-get upgrade -y
-sudo apt install nano 
+sudo apt install nano \
     sshpass llvm-* lld --no-install-recommends -y \
     autogen autotools-dev jq binutils xz-utils zstd \
     binutils-aarch64-linux-gnu binutils-arm-linux-gnueabi \
@@ -29,8 +29,8 @@ sleep 1
 . $HOME/scripts/global/git_env
 
 # Setup for VPS/Server
-git clone https://github.com/akhilnarang/scripts $HOME/scripts
-. $HOME/scripts/setup/android_build_env.sh
+git clone https://github.com/akhilnarang/scripts $HOME/akhil_scripts
+. $HOME/akhil_scripts/setup/android_build_env.sh
 sleep 1
 
 # Setup Barom
