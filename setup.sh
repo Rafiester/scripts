@@ -8,14 +8,14 @@ echo "1. Gitpod.io"
 echo "2. Cloud Server"
 echo ""
 echo "Write number only!"
-read -s srv
+read -s choice
 
-if [ "$srv" == "1" ];
+if [ "$choice" == "1" ];
 	then
 		echo "Installing for Gitpod.io"
                 . /workspace/scripts/gitpod/setup_env
 
-elif [ "$srv" == "2" ];
+elif [ "$choice" == "2" ];
 	then
 
 		echo "Installing for Private Cloud Server ?"

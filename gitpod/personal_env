@@ -46,7 +46,6 @@ if [[ ! -d $TC/clang ]]; then
 fi
 }
 
-
 # Setup Google Clang + Baremetal GCC
 function clone_gccclang() {
 if [[ ! -d $TC/clang || ! -d $TC/gcc64 || ! -d $TC/gcc32 ]]; then
