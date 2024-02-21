@@ -23,7 +23,5 @@ elif [ "$choice" == "2" ];
 fi
 }
 
-
-
 # Run
 init_option
