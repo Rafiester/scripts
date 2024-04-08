@@ -13,13 +13,13 @@ read -s choice
 if [ "$choice" == "1" ];
 	then
 		echo "Installing for Gitpod.io"
-                . /workspace/scripts/gitpod/setup_env
+                . /workspace/scripts/gitpod/gitpod_setup_env
 
 elif [ "$choice" == "2" ];
 	then
 
 		echo "Installing for Private Cloud Server ?"
-                . $HOME/scripts/vps/setup_env
+                . $HOME/scripts/vps/vps_setup_env.sh
 fi
 }
 

@@ -26,7 +26,7 @@ sudo apt install nano \
 sleep 1
 
 # Setup GitHub
-. $HOME/scripts/global/git_env
+. $HOME/scripts/setup/git_env
 
 # Setup for VPS/Server
 git clone https://github.com/akhilnarang/scripts $HOME/akhil_scripts
@@ -34,11 +34,11 @@ git clone https://github.com/akhilnarang/scripts $HOME/akhil_scripts
 sleep 1
 
 # Setup Barom
-. $HOME/scripts/global/barom_env
+. $HOME/scripts/setup/barom_env.sh
 sleep 1
 
 # Setup SSH
-. $HOME/scripts/global/ssh_env
+. $HOME/scripts/setup/ssh_env
 
 # End timer
 END=$(date +"%s")

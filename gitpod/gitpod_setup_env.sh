@@ -8,10 +8,14 @@ sudo apt-get install \
     zip ccache sshpass \
     --no-install-recommends -y
 
-sudo /usr/sbin/update-ccache-symlinks 
-		     
+sudo /usr/sbin/update-ccache-symlinks
+
+# Setup repo
+sudo curl --create-dirs -L -o /usr/local/bin/repo -O -L https://storage.googleapis.com/git-repo-downloads/repo
+sudo chmod a+rx /usr/local/bin/repo
+
 # Setup Git
-. /workspace/scripts/global/git_env
+. /workspace/scripts/setup/git_env
 
 # Setup Barom
-. /workspace/scripts/global/barom_env
+. /workspace/scripts/setup/barom_env.sh
